@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "listar-producto.component.scss"
+    ],
+    "names": [],
+    "file": "listar-producto.component.css"
+}

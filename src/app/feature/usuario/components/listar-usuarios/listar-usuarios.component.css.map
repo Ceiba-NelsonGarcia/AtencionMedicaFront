@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "listar-usuarios.component.scss"
+    ],
+    "names": [],
+    "file": "listar-usuarios.component.css"
+}

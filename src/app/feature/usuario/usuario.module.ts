@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ListarUsuariosComponent } from './components/listar-usuarios/listar-usuarios.component';
-
-
+import { CrearUsuariosComponent } from './components/crear-usuarios/crear-usuarios.component';
 
 @NgModule({
   declarations: [
-    ListarUsuariosComponent
+    ListarUsuariosComponent,
+    CrearUsuariosComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
   ]
 })
 export class UsuarioModule { }
