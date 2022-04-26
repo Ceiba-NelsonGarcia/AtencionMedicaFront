@@ -1,4 +1,32 @@
 p, a, li, span, h1, h2, h3, h4, h5, label, input, .btn, button, select {
   font-family: "nombre de la fuente";
 }
+
+header, section, footer, nav {
+  display: block;
+}
+
+.title {
+  padding: 30px;
+  background-color: #aeeaf9;
+}
+
+h1 {
+  font-family: fantasy;
+  font-size: 400%;
+  text-align: center;
+  background-color: #bdc3c7;
+  padding: 10px;
+  color: blue;
+  width: 100px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 200%;
+  background-color: #33bee1;
+}
 /*# sourceMappingURL=styles.css.map */

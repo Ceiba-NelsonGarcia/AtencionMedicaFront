@@ -7,3 +7,43 @@
 @import "assets/scss/partials/grids";
 @import "assets/scss/partials/global";
 @import "assets/scss/partials/buttons";
+
+header, section, footer, nav {
+  display: block;
+}
+
+.title {
+  padding: 30px;
+  background-color: #aeeaf9;
+}
+
+h1 {
+  font-family: Arial;
+  font-size: 400%;
+  text-align: center;
+  background-color: #bdc3c7;
+  padding: 10px;
+  color: blue;
+  width: 100px;
+}
+
+h2{
+  font-family: Arial;
+  font-size: 200%;
+  background-color: #bdc3c7;
+  color: blue;
+  padding: 20px;
+}
+
+.btn{
+  margin: 0px 0px 0px 100px;
+}
+
+footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 200%;
+  background-color: #33bee1;
+}

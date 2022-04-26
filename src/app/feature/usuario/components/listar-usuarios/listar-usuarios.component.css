@@ -1,1 +1,4 @@
-/* No CSS *//*# sourceMappingURL=listar-usuarios.component.css.map */
+.table {
+  width: 800px;
+  margin: 50px;
+}
