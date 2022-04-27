@@ -9,6 +9,6 @@ export class Usuario{
   }
 }
 
-export interface CrearUsuarioDTO extends Omit<Usuario, "idUsuario">{
+export interface CrearUsuarioDTO extends Omit<Usuario, 'idUsuario'>{
   nombreUsuario: string;
 }

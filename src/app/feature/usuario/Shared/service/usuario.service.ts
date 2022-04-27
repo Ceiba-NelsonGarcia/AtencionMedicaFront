@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import {Observable} from 'rxjs';
-import {HttpService} from '../../../../core/services/http.service';
+import { Observable } from 'rxjs';
+import { HttpService } from '../../../../core/services/http.service';
 import { Usuario, CrearUsuarioDTO } from '../model/usuario';
 
 @Injectable({
@@ -19,14 +19,17 @@ export class UsuarioService {
   public consultar(): Observable<Usuario[]> {
     return this.httpService.get<Usuario[]>(this.urlGet);
   }
-  //  return this.httpService.delete(`${this.url}/${id}`);
-  public actualizarUsuario(credenciales: object): any {
-    return this.httpService.put(this.urlPut, credenciales);
+
+  public actualizarUsuario(id: number, usuairo: Usuario): any {
+    return this.httpService.put(`${this.urlPut}/${id}`, usuairo);
   }
 
   //Observable<Variable>
   public crearUsuario(dtoUsuario: CrearUsuarioDTO): any {
-    console.log("Metodo crear usuairo")
     return this.httpService.post<CrearUsuarioDTO, number>(this.urlPost, dtoUsuario);
+  }
+
+  public eliminarUsuario(id: number): any {
+    return this.httpService.delete(`${this.urlPut}/${id}`);
   }
 }

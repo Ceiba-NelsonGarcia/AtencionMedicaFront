@@ -30,7 +30,6 @@ export class HttpService {
 
   post<T, R>(url: string, body: T): Observable<R> {
     const options = this.createOptionsHeaders();
-    console.log("Metodo post Service")
     return this.httpClient.post<R>(url, body, options);
   }
 
