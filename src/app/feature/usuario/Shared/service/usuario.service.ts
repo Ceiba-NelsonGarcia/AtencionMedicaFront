@@ -7,7 +7,7 @@ import { environment } from 'src/environments/environment';
 @Injectable()
 export class UsuarioService {
 
-   constructor(private httpService: HttpService) { }
+  constructor(private httpService: HttpService) { }
 
   public consultar(): Observable<Usuario[]> {
     return this.httpService.get<Usuario[]>(`${environment.endpoint}/usuarios`);
