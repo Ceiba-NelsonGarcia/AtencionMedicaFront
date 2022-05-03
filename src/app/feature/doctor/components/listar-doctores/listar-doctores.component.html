@@ -15,11 +15,11 @@
     </thead>
     <tbody>
     <tr *ngFor="let doctor of listarDoctores">
-      <th>1.</th>
-      <td headers="idDoctor">{{doctor.idDoctor}}</td>
-      <td headers="nombreDoctor">{{doctor.nombreDoctor}}</td>
-      <td headers="idTarifa">{{doctor.idTarifa}}</td>
-      <td headers="idHorario">{{doctor.idHorario}}</td>
+      <th scope="row">Doctores</th>
+      <td>{{doctor.idDoctor}}</td>
+      <td>{{doctor.nombreDoctor}}</td>
+      <td>{{doctor.idTarifa}}</td>
+      <td>{{doctor.idHorario}}</td>
     </tr>
     </tbody>
   </table>

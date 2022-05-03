@@ -12,9 +12,9 @@
     </thead>
     <tbody>
       <tr *ngFor="let usuario of listarUsuarios">
-        <th>1.</th>
-        <td headers="idUsuario">{{usuario.idUsuario}}</td>
-        <td headers="nombreUsaurio">{{usuario.nombreUsuario}}</td>
+        <th scope="row">Usuarios</th>
+        <td>{{usuario.idUsuario}}</td>
+        <td>{{usuario.nombreUsuario}}</td>
       </tr>
     </tbody>
   </table>

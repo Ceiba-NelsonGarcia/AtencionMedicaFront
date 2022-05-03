@@ -20,15 +20,15 @@
     </thead>
     <tbody>
     <tr *ngFor="let cita of listarCitas">
-      <th>1.</th>
-      <td headers="idCita">{{cita.idCita}}</td>
-      <td headers="idUsuario">{{cita.idUsuario}}</td>
-      <td headers="idDoctor">{{cita.idDoctor}}</td>
-      <td headers="FechaCita">{{cita.fechaCita}}</td>
-      <td headers="horaInicial">{{cita.horaInicial}}</td>
-      <td headers="horaFinal">{{cita.horaFinal}}</td>
-      <td headers="valorUSD">{{cita.valorUsd}}</td>
-      <td headers="valorCOP">{{cita.valorCop}}</td>
+      <th scope="row">Citas</th>
+      <td>{{cita.idCita}}</td>
+      <td>{{cita.idUsuario}}</td>
+      <td>{{cita.idDoctor}}</td>
+      <td>{{cita.fechaCita}}</td>
+      <td>{{cita.horaInicial}}</td>
+      <td>{{cita.horaFinal}}</td>
+      <td>{{cita.valorUsd}}</td>
+      <td>{{cita.valorCop}}</td>
     </tr>
     </tbody>
   </table>
