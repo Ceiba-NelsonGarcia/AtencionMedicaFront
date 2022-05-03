@@ -38,7 +38,7 @@ export class ActualizarCitaComponent{
       this.citaService.actualizarCita(this.idCita, cita)
         .subscribe(data => console.log(data));
     } catch (error) {
-      alert('Sucedió un error con la creación de la Cita');
+      alert('Sucedió un error con la actualización de la Cita');
     }
   }
 

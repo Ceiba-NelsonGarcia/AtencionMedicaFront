@@ -10,14 +10,6 @@
         <input type="text" name="nombre" id="nombre" placeholder="Nombre Doctor" class="form-control" [(ngModel)]="nombreDoctor">
       </div>
 
-    <!--  <div class="mb-3">
-        <label for="tarifa" class="col-sm-2 col-form-label">Tarifa</label>
-        <div class="mb-3">
-          <select id="tarifa" class="form-control" [(ngModel)]="tarifas">
-            <option *ngFor="let tarifa of tarifas" [value]="tarifa.idTarifa">{{tarifa.nombre}}</option>
-          </select>
-        </div>
-      </div>-->
       <div class="mb-3">
         <label for="tarifa" class="form-label">Tipo: 1.General 2.Especialista</label>
         <input type="text" name="tarifa" id="tarifa" placeholder="Código de Tipo" class="form-control" [(ngModel)]="idTarifa">
