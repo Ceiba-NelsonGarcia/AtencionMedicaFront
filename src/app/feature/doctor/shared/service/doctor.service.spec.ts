@@ -1,16 +1,20 @@
 import { TestBed } from '@angular/core/testing';
-
 import { DoctorService } from './doctor.service';
+import {HttpClientModule} from '@angular/common/http';
 
 describe('DoctorService', () => {
-  let service: DoctorService;
+
+  const doctorServiceSpy = jasmine.createSpyObj('doctorService', ['consultar']);
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(DoctorService);
+    TestBed.configureTestingModule({
+      imports: [HttpClientModule],
+      declarations: [ DoctorService ],
+      providers: [{provide: DoctorService, useValue: doctorServiceSpy }, {}]
+    });
   });
 
   it('should be created', () => {
-    expect(service).toBeTruthy();
+    expect(doctorServiceSpy).toBeTruthy();
   });
 });

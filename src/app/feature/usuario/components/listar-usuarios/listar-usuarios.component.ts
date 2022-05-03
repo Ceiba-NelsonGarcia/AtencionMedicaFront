@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { Usuario } from '../../Shared/model/usuario';
 import { UsuarioService } from '../../Shared/service/usuario.service';
 import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-listar-usuarios',
   templateUrl: './listar-usuarios.component.html',
   styleUrls: ['./listar-usuarios.component.scss']
 })
+
 export class ListarUsuariosComponent implements OnInit {
 
   constructor(private usuarioService: UsuarioService, private router: Router) { }

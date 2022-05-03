@@ -1,12 +1,11 @@
 import { HttpClientModule } from '@angular/common/http';
 import { TestBed } from '@angular/core/testing';
-
 import { UsuarioService } from './usuario.service';
 
 describe('UsuarioService', () => {
 const usuarioServiceSpy = jasmine.createSpyObj('UsuarioService', ['consultar']);
 
-  beforeEach(async () => {
+beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [HttpClientModule],
       declarations: [ UsuarioService ],
@@ -15,7 +14,7 @@ const usuarioServiceSpy = jasmine.createSpyObj('UsuarioService', ['consultar']);
     .compileComponents();
   });
 
-  it('should be created', () => {
+it('should be created', () => {
     expect(usuarioServiceSpy).toBeTruthy();
   });
 });

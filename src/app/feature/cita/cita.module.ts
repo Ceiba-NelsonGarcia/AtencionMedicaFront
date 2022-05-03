@@ -4,8 +4,10 @@ import { ListarCitasComponent } from './components/listar-citas/listar-citas.com
 import { CrearCitaComponent } from './components/crear-cita/crear-cita.component';
 import { EliminarCitaComponent } from './components/eliminar-cita/eliminar-cita.component';
 import { ActualizarCitaComponent } from './components/actualizar-cita/actualizar-cita.component';
-
-
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {RouterModule} from '@angular/router';
+import {CitaRoutingModule} from './cita-routing.module';
+import {CitaService} from './shared/service/cita.service';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,12 @@ import { ActualizarCitaComponent } from './components/actualizar-cita/actualizar
     ActualizarCitaComponent
   ],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    FormsModule,
+    RouterModule,
+    CitaRoutingModule,
+    ReactiveFormsModule,
+  ],
+  providers: [CitaService]
 })
 export class CitaModule { }

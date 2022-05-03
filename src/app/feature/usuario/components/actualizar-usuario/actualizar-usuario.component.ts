@@ -29,5 +29,4 @@ export class ActualizarUsuarioComponent{
   Atras(){
     this.router.navigate(['usuario/listar']);
   }
-
 }

@@ -12,9 +12,7 @@ export class EliminarUsuarioComponent{
   titulo = 'Eliminar Usuario';
   idUsuario: number;
 
-  constructor(private router: Router,
-              private usuarioService: UsuarioService
-              ) { }
+  constructor(private router: Router, private usuarioService: UsuarioService) { }
 
   Eliminar(){
     try{

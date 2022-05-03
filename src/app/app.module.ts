@@ -8,6 +8,8 @@ import { CookieService } from 'ngx-cookie-service';
 import { UsuarioModule } from './feature/usuario/usuario.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import {DoctorModule} from './feature/doctor/doctor.module';
+import {CitaModule} from './feature/cita/cita.module';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     CoreModule,
     UsuarioModule,
+    DoctorModule,
+    CitaModule,
     HttpClientModule,
     FormsModule,
     ],

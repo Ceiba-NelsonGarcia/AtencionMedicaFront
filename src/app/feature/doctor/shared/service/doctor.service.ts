@@ -11,18 +11,18 @@ export class DoctorService {
   constructor(private httpService: HttpService) { }
 
   public consultar(): Observable<Doctor[]> {
-    return this.httpService.get<Doctor[]>(`${environment.endpoint}/Doctors`);
+    return this.httpService.get<Doctor[]>(`${environment.endpoint}/doctores`);
   }
 
   public actualizarDoctor(id: number, doctor: Doctor): Observable<Doctor> {
-    return this.httpService.put(`${environment.endpoint}/Doctors/${id}`, doctor);
+    return this.httpService.put(`${environment.endpoint}/doctores/${id}`, doctor);
   }
 
   public crearDoctor(dtoDoctor: DoctorDTO): Observable<number> {
-    return this.httpService.post<DoctorDTO, number>(`${environment.endpoint}/Doctors/crear`, dtoDoctor);
+    return this.httpService.post<DoctorDTO, number>(`${environment.endpoint}/doctores/crear`, dtoDoctor);
   }
 
   public eliminarDoctor(id: number): Observable<Doctor> {
-    return this.httpService.delete(`${environment.endpoint}/Doctors/${id}`);
+    return this.httpService.delete(`${environment.endpoint}/doctores/${id}`);
   }
 }
