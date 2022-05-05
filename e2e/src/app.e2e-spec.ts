@@ -9,8 +9,8 @@ describe('workspace-project App', () => {
   });
 
   it('should display welcome message', () => {
-    page.navigateTo();
-    expect(page.getTitleText()).toEqual('Angular Seed');
+    page.navigateToHome();
+    expect(page.getTitleText()).toEqual('ATENCIÓN MEDICA');
   });
 
   afterEach(async () => {

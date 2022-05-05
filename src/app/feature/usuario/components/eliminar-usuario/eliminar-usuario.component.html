@@ -6,13 +6,13 @@
     <div class="form-group col-md-3">
 
       <div class="mb-3">
-        <label for="IdUsuario" class="form-label">Digite el Id del usaurio</label>
-        <input type="number" name="IdUsuario" id="IdUsuario" placeholder="Id Usaurio" class="form-control" [(ngModel)]="idUsuario">
+        <label for="idUsuario" class="form-label">Digite el Id del usaurio</label>
+        <input type="number" name="idUsuario" id="idUsuario" placeholder="Id Usaurio" class="form-control" [(ngModel)]="idUsuario">
       </div>
 
       <nav class="navbar navbar-expand-lg">
-        <button class="btn btn-outline-primary" type="submit" (click)="eliminar()">Eliminar</button>
-        <button class="btn btn-outline-primary" type="button" (click)="atras()">Atras</button>
+        <button id="eliminar" class="btn btn-outline-primary" type="submit" (click)="eliminar()">Eliminar</button>
+        <button id="atras" class="btn btn-outline-primary" type="button" (click)="atras()">Atras</button>
       </nav>
 
     </div>

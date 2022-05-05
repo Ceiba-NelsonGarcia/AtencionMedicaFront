@@ -23,9 +23,7 @@ export class ActualizarUsuarioComponent{
       this.usuarioService.actualizarUsuario(this.idUsuario, usuario)
         .subscribe(data => console.log(data));
       this.confirmacion = true;
-      console.log('Try componente');
     } catch (error) {
-      console.log('Validacion alerta componente');
       alert('Sucedio un error con la creacion del usaurio');
     }
   }
