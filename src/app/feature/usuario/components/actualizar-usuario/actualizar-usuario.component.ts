@@ -13,20 +13,24 @@ export class ActualizarUsuarioComponent{
   titulo = 'Actualizar Usuario';
   idUsuario: number;
   nombreUsuario: string;
+  confirmacion = false;
 
   constructor(private router: Router, private usuarioService: UsuarioService) { }
 
-  Actualizar(){
-    const usuario: Usuario = {idUsuario: this.idUsuario, nombreUsuario: this.nombreUsuario};
+  actualizar(){
     try{
+      const usuario: Usuario = {idUsuario: this.idUsuario, nombreUsuario: this.nombreUsuario};
       this.usuarioService.actualizarUsuario(this.idUsuario, usuario)
         .subscribe(data => console.log(data));
+      this.confirmacion = true;
+      console.log('Try componente');
     } catch (error) {
-      alert('Sucedió un error con la creación del usaurio');
+      console.log('Validacion alerta componente');
+      alert('Sucedio un error con la creacion del usaurio');
     }
   }
 
-  Atras(){
+  public async atras() {
     this.router.navigate(['usuario/listar']);
   }
 }
