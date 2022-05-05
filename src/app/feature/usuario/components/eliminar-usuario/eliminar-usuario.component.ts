@@ -11,19 +11,21 @@ export class EliminarUsuarioComponent{
 
   titulo = 'Eliminar Usuario';
   idUsuario: number;
+  confirmacion = false;
 
   constructor(private router: Router, private usuarioService: UsuarioService) { }
 
-  Eliminar(){
+  eliminar(){
     try{
       this.usuarioService.eliminarUsuario(this.idUsuario)
         .subscribe(data => console.log(data));
+      this.confirmacion = true;
     } catch (error) {
       alert('Sucedio un error con la eliminacion del usaurio');
     }
   }
 
-  Atras(){
+  atras(){
     this.router.navigate(['usuario/listar']);
   }
 }

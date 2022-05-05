@@ -20,10 +20,11 @@ export class ActualizarCitaComponent{
   horaFinal: number;
   valorUsd: number;
   valorCop: number;
+  confirmacion = false;
 
   constructor(private router: Router, private citaService: CitaService) { }
 
-  Actualizar(){
+  actualizar(){
     const cita: Cita = {
       idCita: this.idCita,
       idUsuario: this.idUsuario,
@@ -37,12 +38,13 @@ export class ActualizarCitaComponent{
     try{
       this.citaService.actualizarCita(this.idCita, cita)
         .subscribe(data => console.log(data));
+      this.confirmacion = true;
     } catch (error) {
       alert('Sucedió un error con la actualización de la Cita');
     }
   }
 
-  Atras(){
+  atras(){
     this.router.navigate(['cita/listar']);
   }
 

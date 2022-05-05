@@ -34,7 +34,7 @@ describe('ActualizarUsuarioComponent',
       fixture.detectChanges();
     });
 
-    it('should create', () => {
+    it('Prueba componente actualizar usuario', () => {
       expect(component).toBeTruthy();
     });
 
@@ -43,6 +43,12 @@ describe('ActualizarUsuarioComponent',
       component.actualizar();
       expect(component.confirmacion).toBeTruthy();
     });
+
+/*    it(' Actualizar usuario fallida ', () => {
+      spyOn(window, 'alert');
+      component.actualizar();
+      expect(window.alert).toHaveBeenCalledWith('Sucedio un error con la creacion del usaurio');
+    });*/
 
     it('Devolverse al home de usaurios',
       (): void => {

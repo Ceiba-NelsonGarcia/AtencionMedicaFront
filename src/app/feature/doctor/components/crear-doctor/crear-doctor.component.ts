@@ -15,31 +15,22 @@ export class CrearDoctorComponent {
   nombreDoctor: string;
   idTarifa: number;
   idHorario: number;
-/*  tarifas = [
-              {
-                idTarifa: 1,
-                nombre: 'General'
-              },
-              {
-                idTarifa: 2,
-                nombre: 'Especialista'
-              }
-            ];*/
+  confirmacion = false;
 
   constructor(private router: Router, private doctorService: DoctorService) { }
 
-  Crear(){
+  crear(){
     const doctorDto: DoctorDTO = {nombreDoctor: this.nombreDoctor, idTarifa: 1, idHorario: this.idHorario};
-    console.log('Se crea DoctorDTO', doctorDto);
     try{
       this.doctorService.crearDoctor(doctorDto)
         .subscribe(data => console.log(data));
+      this.confirmacion = true;
     } catch (error) {
       alert('Sucedió un error con la creación del usaurio');
     }
   }
 
-  Atras(){
+  atras(){
     this.router.navigate(['doctor/listar']);
   }
 

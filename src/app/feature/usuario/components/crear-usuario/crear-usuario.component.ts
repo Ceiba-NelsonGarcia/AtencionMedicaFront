@@ -12,20 +12,22 @@ export class CrearUsuarioComponent{
 
   titulo = 'Crear Usuario';
   nombreUsuario: string;
+  confirmacion = false;
 
   constructor(private router: Router, private usuarioService: UsuarioService) { }
 
-  Crear(){
+  crear(){
     const usuarioDto: CrearUsuarioDTO = {nombreUsuario: this.nombreUsuario};
     try{
       this.usuarioService.crearUsuario(usuarioDto)
         .subscribe(data => console.log(data));
+      this.confirmacion = true;
     } catch (error) {
       alert('Sucedió un error con la creación del usaurio');
     }
   }
 
-  Atras(){
+  atras(){
     this.router.navigate(['usuario/listar']);
   }
 }

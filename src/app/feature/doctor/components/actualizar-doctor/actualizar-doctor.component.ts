@@ -16,20 +16,22 @@ export class ActualizarDoctorComponent{
   nombreDoctor: string;
   idTarifa: number;
   idHorario: number;
+  confirmacion = false;
 
   constructor(private router: Router, private doctorService: DoctorService) { }
 
-  Actualizar(){
+  actualizar(){
     const doctor: Doctor = {idDoctor: this.idDoctor, nombreDoctor: this.nombreDoctor, idTarifa: this.idTarifa, idHorario: this.idHorario};
     try{
       this.doctorService.actualizarDoctor(this.idDoctor, doctor)
         .subscribe(data => console.log(data));
+      this.confirmacion = true;
     } catch (error) {
       alert('Sucedió un error con la creación del usaurio');
     }
   }
 
-  Atras(){
+  atras(){
     this.router.navigate(['doctor/listar']);
   }
 }

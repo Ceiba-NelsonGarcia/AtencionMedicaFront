@@ -18,10 +18,11 @@ export class CrearCitaComponent {
   horaFinal: number;
   valorUsd: number;
   valorCop: number;
+  confirmacion = false;
 
   constructor(private router: Router, private citaService: CitaService) { }
 
-  Crear(){
+  crear(){
     const citaDto: CitaDTO = {
                                 idUsuario: this.idUsuario,
                                 idDoctor: this.idDoctor,
@@ -34,12 +35,13 @@ export class CrearCitaComponent {
     try{
       this.citaService.crearCita(citaDto)
         .subscribe(data => console.log(data));
+      this.confirmacion = true;
     } catch (error) {
-      alert('Sucedió un error con la creación del usaurio');
+      alert('Sucedió un error con la creación de la cita');
     }
   }
 
-  Atras(){
+  atras(){
     this.router.navigate(['cita/listar']);
   }
 }
