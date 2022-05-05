@@ -44,8 +44,7 @@ describe('EliminarUsuarioComponent', () => {
     expect(component.confirmacion).toBeTruthy();
   });
 
-  it('Devolverse al home de usaurios',
-    (): void => {
+  it('Devolverse al home de usaurios', (): void => {
       component.atras();
       expect(routerSpy.navigate).toHaveBeenCalledWith(['usuario/listar']);
     });
