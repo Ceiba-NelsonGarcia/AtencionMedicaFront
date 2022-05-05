@@ -24,7 +24,7 @@ module.exports = function (config) {
       }
     },
     coverageIstanbulReporter: {
-      dir: require('path').join(__dirname, 'reports/coverage/app-base'),
+      dir: require('path').join(__dirname, 'reports/coverage/atencionmedicafront'),
       reports: ['html', 'lcovonly', 'text-summary'],
       fixWebpackSourcePaths: true
     },
